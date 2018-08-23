@@ -3,8 +3,9 @@ require 'active_record'
 ActiveRecord::Base.establish_connection(
     :adapter => "mysql2",
     :host => "localhost",
-    :database => "bookstore",
-    :username => "",
-    :password => ""
+    :database => "company",
+    :username => "root",
+    :password => "123456",
+    :port => "3307"
 
 )
