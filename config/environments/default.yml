@@ -1,0 +1,5 @@
+company_host: '127.0.0.1'
+company_port: '3307'
+company_name: 'company'
+company_user: 'root'
+company_password: '123456'

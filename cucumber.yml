@@ -1,1 +1,2 @@
-default: --no-source --color --format pretty
+default: --no-source --color --format pretty local
+local: FIG_NEWTON_FILE=default.yml
