@@ -5,8 +5,9 @@ end
 
 When /^I create a new collaborator$/ do
   collaborator = Collaborator.new
-  collaborator.name = 'Pilar'
-  collaborator.lastname = 'Romero'
+  collaborator.NAME = 'Pilar'
+  collaborator.LASTNAME = 'Romero'
+  collaborator.SECOND_LASTNAME = 'Romero'
   collaborator.save
 
 end
@@ -17,10 +18,10 @@ Then /^I should have (\d+) additional collaborator$/ do |add_collaborators|
 end
 
 Given /^I have a collaborator "([^"]*)"$/ do |original_name|
-  collaborator = collaborator.new
-  collaborator.name = original_name
-  collaborator.lastname = 'Duck'
-  collaborator.second_lastname = 'Paw'
+  collaborator = Collaborator.new
+  collaborator.NAME = original_name
+  collaborator.LASTNAME = 'Duck'
+  collaborator.SECOND_LASTNAME = 'Paw'
   collaborator.save
   @original_name = original_name
 
@@ -38,7 +39,7 @@ end
 
 When /^I update the name to "([^"]*)"$/ do |name|
   collaborator = Collaborator.find_by_name(@original_name)
-  collaborator.name = name
+  collaborator.NAME = name
   collaborator.save
 
 end
